@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="TitleBox"
+         Grid.Row="0"
+         Margin="0,0,0,10"
+         Height="28"
+         Text=""
+         ToolTip="Введите название записи"/>
+
+        <StackPanel Grid.Row="1"
+            Orientation="Horizontal"
+            Margin="0,0,0,10">
+            <Button Content="Start Recording"
+            Width="140"
+            Margin="0,0,10,0"
+            Click="StartRecording_Click"/>
+            <Button Content="Stop &amp; Save"
+            Width="120"
+            Click="StopRecording_Click"/>
+        </StackPanel>
+
+        <ListBox x:Name="TranscriptsList"
+         Grid.Row="2"/>
 
     </Grid>
 </Window>
